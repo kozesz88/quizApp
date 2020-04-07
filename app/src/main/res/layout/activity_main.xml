@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            style="@style/QuestionText"
+            android:text="what's the minimum time you should wash your hands for? (in seconds)" />
+
+        <EditText
+            android:id="@+id/washingHands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="your answer"
+            android:inputType="textCapWords" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:text="can pets spread covid19?" />
+
+        <RadioGroup
+            android:id="@+id/pets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/petsYes"
+                style="@style/radioButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yes" />
+
+            <RadioButton
+                android:id="@+id/petsNo"
+                style="@style/radioButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="no" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionText"
+            android:text="which ones are the symptoms of covid19?" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/sneez"
+                style="@style/radioButtons"
+                android:text="sneezing" />
+
+            <CheckBox
+                android:id="@+id/cough"
+                style="@style/radioButtons"
+                android:text="coughing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/highBodyTemperature"
+                style="@style/radioButtons"
+                android:text="high fever" />
+
+            <CheckBox
+                android:id="@+id/lowBodyTemperature"
+                style="@style/radioButtons"
+                android:text="low body temperature" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionText"
+            android:text="How far you should stay from other people?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/twoMeter"
+                style="@style/radioButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="at least 2 meter" />
+
+            <RadioButton
+                android:id="@+id/oneMeter"
+                style="@style/radioButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 meter" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionText"
+            android:text="Does toilet paper cure Covid19?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/toiletPaperYes"
+                style="@style/radioButtons"
+                android:text="yes" />
+
+            <RadioButton
+                android:id="@+id/toiletPaperNo"
+                style="@style/radioButtons"
+                android:text="no" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitAnswers"
+            android:text="Get Score" />
+    </LinearLayout>
+</ScrollView>
